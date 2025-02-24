@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Postman!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Software Postman!</h1>
+        
+        <!-- Seleção de método HTTP -->
+        <div class="request-options">
+            <label for="method">Método:</label>
+            <select id="method">
+                <option value="GET">GET</option>
+                <option value="POST">POST</option>
+                <option value="DELETE">DELETE</option>
+            </select>
+        </div>
+        
+        <!-- Campo URL -->
+        <div class="input-data">
+            <label for="url">URL:</label>
+            <input type="text" id="url" placeholder="Digite a URL">
+        </div>
+        
+        <!-- Corpo da requisição (Formulario de chave-valor) -->
+        <div class="key-value-form" id="key-value-form">
+            <label>Corpo da Requisição (Formato KEY-VALUE):</label>
+            <div class="form-item">
+                <input type="text" class="key" placeholder="Chave" />
+                <input type="text" class="value" placeholder="Valor" />
+                <button id="add-pair">Adicionar Par</button>
+            </div>
+        </div>
+
+        <!-- Escolher formato da resposta -->
+        <div class="response-format">
+            <label for="response-format">Formato da Resposta:</label>
+            <select id="response-format">
+                <option value="json">JSON</option>
+                <option value="text">Texto Simples</option>
+            </select>
+        </div>
+
+        <button id="send-request">Enviar Requisição</button>
+
+        <!-- Exibição da resposta -->
+        <div id="response" class="response">
+            <h2 id="status-code">Resposta:</h2>
+            <pre id="response-output"></pre>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
